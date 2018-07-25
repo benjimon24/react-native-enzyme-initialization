@@ -1,0 +1,40 @@
+{
+  "name": "unit-testing",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-expo": "~27.0.0",
+    "react-native-mock": "^0.3.1",
+    "react-native-scripts": "1.14.0",
+    "react-test-renderer": "16.3.1"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "jest --verbose --watchAll"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/tempPolyfills.js",
+      "!src/setupTests.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/tempPolyfills.js",
+      "<rootDir>/src/setupTests.js"
+    ]
+  },
+  "dependencies": {
+    "expo": "^27.0.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.4.1",
+    "react-native": "~0.55.2"
+  }
+}
